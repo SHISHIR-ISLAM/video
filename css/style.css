@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.showcase {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    padding: 100px;
+    transition: 0.8s ease-in;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+
+.menu {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items:center;
+}
+
+.menu ul {
+    list-style: none;    
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #111;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.4s ease-in;
+}
+
+ul li a:hover {
+    color: #03a9f4;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+header .toggle {
+    background: url(../menu\ \(2\).png) no-repeat center /cover ;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+header .toggle.active {
+    background: url(../close.png) no-repeat center /cover;
+}
+
+.showcase video {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0 0;
+    height: 100%;
+    width: 100%;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
+}
+
+
+.showcase .text {
+    position: relative;
+    z-index: 150;
+}
+
+
+.showcase .text h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+    line-height: 1em;
+}
+.showcase .text h3 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    line-height: 1.5em;
+}
+
+.showcase .text p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    margin: 20px 0;
+    max-width: 700px;
+}
+
+.showcase .text a {
+    padding: 10px 30px;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.showcase .text a:hover {
+    letter-spacing: 5px;
+}
+
+.social {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    font-size: 2em;
+    list-style: none;
+}
+
+.social li {
+    margin: 10px;
+    transform: scale(0.6);
+    filter: invert(0);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.social li:hover {
+    transform: scale(0.6) translateY(-15px);
+}
+
+
+@media screen and (max-width: 786px) {
+    .showcase , .showcase header {
+        padding: 40px;
+    }
+    .showcase .text h2{
+        font-size: 2.9em;
+    }
+    .showcase .text h3 {
+        font-size: 2em;
+    }
+}
+
+
